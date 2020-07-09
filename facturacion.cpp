@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     int factura, codigoproducto, cantidaddetalles=0;
-    double precio, cantidad, subtotaldetalle=0, subtotal=0, descuento=0, isv=0, totalpagar=0;
+    double precio, rtn,  cantidad, subtotaldetalle=0, subtotal=0, descuento=0, isv=0, totalpagar=0;
     string cliente, producto;
     const double PORCENTAJEDESCUENTO = 0.05;
     const double PORCENTAJEISV = 0.015;
@@ -15,6 +15,8 @@ int main(){
     cin >> cantidaddetalles;
     for (int i = 0; i < cantidaddetalles; i++)
     {
+        cout <<"RTN: ";
+        cin >> rtn;
         cout << "Introduzca el codigo producto: ";
         cin >> codigoproducto;
         cout << "Introduzca el producto: ";
@@ -33,7 +35,7 @@ int main(){
     cout << "El subtotal es: "<< subtotal << endl;
     cout << "El descuento es: "<< descuento << endl;
     cout << "El ISV es: "<< isv << endl;
-    cout << "El total a pagar es: " << totalpagar << endl;
+    cout << "El total a pagar es: " << totalpagar << endl; // muestra el total a pagar de los productos
 
     return 0;
 }
